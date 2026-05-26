@@ -1,0 +1,10 @@
+# Parameter dictionary for GRAV2L topology.
+# Each parameter gives the name used in FIRE's config/template.
+
+parameters:
+  d:
+    description: Spacetime dimension (dimensional regularization)
+    fire: d
+  x:
+    description: Kinematic variable x
+    fire: x

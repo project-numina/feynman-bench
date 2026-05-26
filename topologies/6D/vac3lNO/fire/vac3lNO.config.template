@@ -1,0 +1,9 @@
+#compressor        none
+#threads           {{THREADS}}
+#variables         {{PARAMETERS}}
+#prime             0
+#start
+#problem           0 {{SBASES_PATH}}
+#lbases            {{LBASES_PATH}}
+#integrals         {{INTEGRALS_PATH}}
+#output            {{OUTPUT_PATH}}

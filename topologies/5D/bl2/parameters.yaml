@@ -1,0 +1,19 @@
+# Parameter dictionary for BL2 topology (unequal-mass 2L banana).
+# Each parameter gives the name used in FIRE's config/template.
+
+parameters:
+  d:
+    description: Spacetime dimension (dimensional regularization)
+    fire: d
+  m1sq:
+    description: Squared mass of particle 1 (m1²)
+    fire: m1sq
+  m2sq:
+    description: Squared mass of particle 2 (m2²)
+    fire: m2sq
+  m3sq:
+    description: Squared mass of particle 3 (m3²)
+    fire: m3sq
+  spkk:
+    description: External momentum squared (k²)
+    fire: spkk

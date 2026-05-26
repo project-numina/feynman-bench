@@ -1,0 +1,11 @@
+# Parameter dictionary for BANANA3L topology (3-loop banana, one symbolic mass).
+# Following the source Mathematica setup, m2sq=5, m3sq=7, m4sq=0 and p^2=1 are
+# baked into the propagators as literal numerics; only d and m1sq vary.
+
+parameters:
+  d:
+    description: Spacetime dimension (dimensional regularization)
+    fire: d
+  m1sq:
+    description: Squared mass of particle 1 (m1²)
+    fire: m1sq

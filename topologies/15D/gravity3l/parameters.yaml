@@ -1,0 +1,10 @@
+# Parameter dictionary for GRAVITY3L topology.
+# Each parameter gives the name used in FIRE's config/template.
+
+parameters:
+  d:
+    description: Spacetime dimension (dimensional regularization)
+    fire: d
+  y:
+    description: Kinematic variable y
+    fire: y

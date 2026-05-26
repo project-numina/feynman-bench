@@ -1,0 +1,13 @@
+# Parameter dictionary for VER2L topology.
+# Each parameter gives the name used in FIRE's config/template.
+
+parameters:
+  d:
+    description: Spacetime dimension (dimensional regularization)
+    fire: d
+  m1sq:
+    description: Squared mass of particle 1 (m1²)
+    fire: m1sq
+  s1:
+    description: Mandelstam variable s1
+    fire: s1

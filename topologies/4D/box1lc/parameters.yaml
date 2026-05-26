@@ -1,0 +1,19 @@
+# Parameter dictionary for BOX1LC topology.
+# Each parameter gives the name used in FIRE's config/template.
+
+parameters:
+  d:
+    description: Spacetime dimension (dimensional regularization)
+    fire: d
+  m1:
+    description: Mass of particle 1 (m1)
+    fire: m1
+  m2:
+    description: Mass of particle 2 (m2)
+    fire: m2
+  qsq:
+    description: Squared momentum transfer (q²)
+    fire: qsq
+  x:
+    description: Kinematic variable x
+    fire: x

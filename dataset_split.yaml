@@ -1,0 +1,60 @@
+# Train/test split for IBP reduction benchmarks.
+#
+# Each entry specifies a topology and the sampling knobs passed to
+# generate_ground_truth.py:
+#   sector_levels      — list of N (= number of non-zero propagator indices)
+#                        from which targets are drawn.
+#   index_range        — [lo, hi] inclusive bounds for non-zero index values
+#                        (zero is always excluded from non-zero positions).
+#   targets_per_level  — upper bound on distinct targets sampled per level;
+#                        the actual count is capped by the combinatorial size
+#                        of the (positions × values) space minus zero sectors.
+#
+# OOD axis: held-out topologies. Every topology lives in exactly one split.
+# Train and test sample from the same distribution per topology (same sector
+# levels, same index range) — the only thing the model has not seen at test
+# time is the topology itself.
+#
+# Per dim with multiple variants, one is held out for test:
+#   2D bub: only variant; train only.
+#   3D bub2l: only variant; train only.
+#   4D box1l → train,  box1lc → test.
+#   5D bl2em + bl2 → train,  ver2l → test.
+#   6D vac3lBN + vac3lNO → train,  vac3lO4 → test.
+#   7D tri2l → train,  tri2lx → test.
+#   9D banana3L + grav2l + grav2lx + p3lBenz + p3lLA → train,  p3lO4 → test.
+#   10D and 15D: no train counterpart; pure structural OOD on test.
+#
+# Sector levels (original v0 scheme, mid-to-high per dim):
+#   2D: 1,2      3D: 2,3      4D: 3,4      5D: 3,4,5      6D: 4,5,6
+#   7D / 9D / 10D / 15D: 4,6,7
+#
+# Target counts: up to ~10k per topology in train, ~100 per topology in test.
+# Small-dim topologies (3D, 4D, 5D) hit their combinatorial ceiling under
+# index_range [-1, 2] well below 10k — that's expected.
+
+train:
+  - {topology: 2D/bub,      sector_levels: [1, 2],    index_range: [-1, 2], targets_per_level: 5000}
+  - {topology: 3D/bub2l,    sector_levels: [2, 3],    index_range: [-1, 2], targets_per_level: 5000}
+  - {topology: 4D/box1l,    sector_levels: [3, 4],    index_range: [-1, 2], targets_per_level: 5000}
+  - {topology: 5D/bl2,      sector_levels: [3, 4, 5], index_range: [-1, 2], targets_per_level: 3334}
+  - {topology: 5D/bl2em,    sector_levels: [3, 4, 5], index_range: [-1, 2], targets_per_level: 3334}
+  - {topology: 6D/vac3lBN,  sector_levels: [4, 5, 6], index_range: [-1, 2], targets_per_level: 3334}
+  - {topology: 6D/vac3lNO,  sector_levels: [4, 5, 6], index_range: [-1, 2], targets_per_level: 3334}
+  - {topology: 7D/tri2l,    sector_levels: [4, 6, 7], index_range: [-1, 2], targets_per_level: 3334}
+  - {topology: 9D/banana3L, sector_levels: [4, 6, 7], index_range: [-1, 2], targets_per_level: 3334}
+  - {topology: 9D/grav2l,   sector_levels: [4, 6, 7], index_range: [-1, 2], targets_per_level: 3334}
+  - {topology: 9D/grav2lx,  sector_levels: [4, 6, 7], index_range: [-1, 2], targets_per_level: 3334}
+  - {topology: 9D/p3lBenz,  sector_levels: [4, 6, 7], index_range: [-1, 2], targets_per_level: 3334}
+  - {topology: 9D/p3lLA,    sector_levels: [4, 6, 7], index_range: [-1, 2], targets_per_level: 3334}
+
+test:
+  - {topology: 4D/box1lc,        sector_levels: [3, 4],    index_range: [-1, 2], targets_per_level: 50}
+  - {topology: 5D/ver2l,         sector_levels: [3, 4, 5], index_range: [-1, 2], targets_per_level: 34}
+  - {topology: 6D/vac3lO4,       sector_levels: [4, 5, 6], index_range: [-1, 2], targets_per_level: 34}
+  - {topology: 7D/tri2lx,        sector_levels: [4, 6, 7], index_range: [-1, 2], targets_per_level: 34}
+  - {topology: 9D/p3lO4,         sector_levels: [4, 6, 7], index_range: [-1, 2], targets_per_level: 34}
+  - {topology: 10D/vac4lBN,      sector_levels: [4, 6, 7], index_range: [-1, 2], targets_per_level: 34}
+  - {topology: 10D/vac4lNP,      sector_levels: [4, 6, 7], index_range: [-1, 2], targets_per_level: 34}
+  - {topology: 15D/gravity3l,    sector_levels: [4, 6, 7], index_range: [-1, 2], targets_per_level: 34}
+  - {topology: 15D/gravity3lsec, sector_levels: [4, 6, 7], index_range: [-1, 2], targets_per_level: 34}

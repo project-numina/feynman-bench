@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "feynman-ibp-bench"
+version = "0.1.0"
+description = "Open benchmark for IBP integral-reduction solvers (FIRE ground truth)"
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+dependencies = [
+    "pyyaml>=6.0",
+]
+
+[project.scripts]
+feynman-eval = "run_eval:main"
+feynman-submit = "leaderboard.submit:main"
+
+[tool.setuptools]
+py-modules = ["run_eval", "score", "check_validity", "reductions"]
+
+[tool.setuptools.packages.find]
+include = ["solvers*", "leaderboard*"]
+exclude = ["topologies*", "results*", "outputs*"]

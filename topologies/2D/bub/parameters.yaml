@@ -1,0 +1,16 @@
+# Parameter dictionary for BUB (1-loop bubble, two distinct masses) topology.
+# Propagators: k^2 - m1^2,  (k-p)^2 - m2^2  (Minkowski sign convention).
+
+parameters:
+  d:
+    description: "Spacetime dimension (dimensional regularization)"
+    fire: d
+  m1sq:
+    description: "Squared mass on propagator 1 (m1^2)"
+    fire: m1sq
+  m2sq:
+    description: "Squared mass on propagator 2 (m2^2)"
+    fire: m2sq
+  qsq:
+    description: "Squared external momentum (q^2)"
+    fire: qsq

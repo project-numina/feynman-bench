@@ -1,0 +1,13 @@
+# Parameter dictionary for BL2EM topology.
+# Each parameter gives the name used in FIRE's config/template.
+
+parameters:
+  d:
+    description: Spacetime dimension (dimensional regularization)
+    fire: d
+  m1sq:
+    description: Squared mass of particle 1 (m1²)
+    fire: m1sq
+  spkk:
+    description: Scalar product of external momentum k with itself (k²)
+    fire: spkk

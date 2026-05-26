@@ -1,0 +1,27 @@
+# Local config (user edits config.example.yaml -> config.yaml)
+config.yaml
+
+# Eval outputs
+outputs/
+results/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+build/
+dist/
+.venv/
+venv/
+ENV/
+
+# FIRE artifacts produced at runtime
+*.tables
+*.log
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+*.swp

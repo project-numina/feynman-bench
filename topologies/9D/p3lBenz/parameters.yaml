@@ -1,0 +1,10 @@
+# Parameter dictionary for P3LBENZ topology.
+# Each parameter gives the name used in FIRE's config/template.
+
+parameters:
+  d:
+    description: Spacetime dimension (dimensional regularization)
+    fire: d
+  s:
+    description: Mandelstam variable s
+    fire: s

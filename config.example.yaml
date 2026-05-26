@@ -1,0 +1,31 @@
+# Solver invocation. Copy to config.yaml and edit for your machine.
+#
+# Only the entry for the solver you intend to run is required.
+
+solvers:
+  # Default: run FIRE inside the prebuilt docker image we publish. Pull it
+  # once with `docker pull ghcr.io/project-numina/fire6:latest`; the wrapper
+  # bind-mounts the repo root into the container at /work so topology setup
+  # files and the per-target output dir are visible without extra config.
+  fire:
+    docker:
+      image: ghcr.io/project-numina/fire6:latest
+      binary: /fire/bin/FIRE6p   # absolute path inside the image. FIRE6p
+                                 # derives its FIRE_folder from argv[0] and
+                                 # only the absolute form lets it locate the
+                                 # bundled fermat (PRIME mode required for
+                                 # benchmark comparability)
+      # platform: linux/amd64    # optional; omit for native-arch images.
+                                 # FIRE6's stock fermat ships x86_64-only —
+                                 # on Apple Silicon you either set
+                                 # linux/amd64 (qemu, slow) or rebuild
+                                 # fermat for arm64.
+      # extra_args: []           # extra flags passed to `docker run`
+
+  # Alternative: point at a FIRE PRIME-mode binary you built yourself
+  # (FIRE7p or FIRE6p). For FIRE 7 the binary must be named FIRE7p so
+  # FLAME7p is picked up as a sibling. Build from
+  # https://gitlab.srcc.msu.ru/feynmanintegrals/fire and replace the
+  # docker block above with:
+  #
+  # fire: /path/to/fire/FIRE7/bin/FIRE7p

@@ -1,0 +1,112 @@
+{
+  "name": "FIRE 7p baseline",
+  "solver": "fire",
+  "submitted_at": "2026-05-22T16:44:09Z",
+  "git_rev": "d95d4f9",
+  "hardware": "x86_64 / Linux / 384 cores",
+  "notes": "Reference baseline: FIRE scored on its own GT (test split). Beat the step_ratio.",
+  "n_predictions": 913,
+  "macro_validity": 1.0,
+  "mean_step_ratio": 1.0,
+  "n_topologies_covered": 9,
+  "totals": {
+    "n_gt": 913,
+    "n_covered": 913,
+    "n_valid": 913,
+    "n_missing": 0,
+    "steps_pred": 4702742,
+    "steps_gt": 4702742
+  },
+  "per_topology": {
+    "10D/vac4lBN": {
+      "n_gt": 102,
+      "n_covered": 102,
+      "n_valid": 102,
+      "n_missing": 0,
+      "steps_pred": 633853,
+      "steps_gt": 633853,
+      "validity": 1.0,
+      "step_ratio": 1.0
+    },
+    "10D/vac4lNP": {
+      "n_gt": 99,
+      "n_covered": 99,
+      "n_valid": 99,
+      "n_missing": 0,
+      "steps_pred": 513262,
+      "steps_gt": 513262,
+      "validity": 1.0,
+      "step_ratio": 1.0
+    },
+    "15D/gravity3l": {
+      "n_gt": 102,
+      "n_covered": 102,
+      "n_valid": 102,
+      "n_missing": 0,
+      "steps_pred": 1354763,
+      "steps_gt": 1354763,
+      "validity": 1.0,
+      "step_ratio": 1.0
+    },
+    "15D/gravity3lsec": {
+      "n_gt": 102,
+      "n_covered": 102,
+      "n_valid": 102,
+      "n_missing": 0,
+      "steps_pred": 1252010,
+      "steps_gt": 1252010,
+      "validity": 1.0,
+      "step_ratio": 1.0
+    },
+    "4D/box1lc": {
+      "n_gt": 100,
+      "n_covered": 100,
+      "n_valid": 100,
+      "n_missing": 0,
+      "steps_pred": 6397,
+      "steps_gt": 6397,
+      "validity": 1.0,
+      "step_ratio": 1.0
+    },
+    "5D/ver2l": {
+      "n_gt": 102,
+      "n_covered": 102,
+      "n_valid": 102,
+      "n_missing": 0,
+      "steps_pred": 11579,
+      "steps_gt": 11579,
+      "validity": 1.0,
+      "step_ratio": 1.0
+    },
+    "6D/vac3lO4": {
+      "n_gt": 102,
+      "n_covered": 102,
+      "n_valid": 102,
+      "n_missing": 0,
+      "steps_pred": 16820,
+      "steps_gt": 16820,
+      "validity": 1.0,
+      "step_ratio": 1.0
+    },
+    "7D/tri2lx": {
+      "n_gt": 102,
+      "n_covered": 102,
+      "n_valid": 102,
+      "n_missing": 0,
+      "steps_pred": 177003,
+      "steps_gt": 177003,
+      "validity": 1.0,
+      "step_ratio": 1.0
+    },
+    "9D/p3lO4": {
+      "n_gt": 102,
+      "n_covered": 102,
+      "n_valid": 102,
+      "n_missing": 0,
+      "steps_pred": 737055,
+      "steps_gt": 737055,
+      "validity": 1.0,
+      "step_ratio": 1.0
+    }
+  }
+}
