@@ -1,4 +1,4 @@
-# feynman-ibp-bench
+# feynman-bench
 
 > **56,102 worked IBP reductions across 22 multi-loop Feynman topologies (2D – 15D)**,
 > produced by FIRE 7 in PRIME mode at a fixed prime (`2017`) and one fixed
@@ -26,8 +26,8 @@ baseline's mean step-ratio** while staying valid.
 
 ```bash
 # 1. The Python package
-git clone https://github.com/project-numina/feynman-ibp-bench
-cd feynman-ibp-bench
+git clone https://github.com/project-numina/feynman-bench
+cd feynman-bench
 pip install -e .
 
 # 2. FIRE in PRIME mode, shipped as a Docker image — building FIRE from
@@ -182,7 +182,7 @@ the smallest reference. Once the files are in place, add an entry to
 
 Want a specific physics topology added but don't want to do the
 Mathematica work yourself?
-**[Open an issue](https://github.com/project-numina/feynman-ibp-bench/issues/new)**
+**[Open an issue](https://github.com/project-numina/feynman-bench/issues/new)**
 with the propagator list, masses, and external momenta — we'll consider
 adding it.
 
@@ -323,12 +323,12 @@ tools/render_topologies.py  regenerate docs/topologies.png
 If you use this dataset, please cite:
 
 ```bibtex
-@dataset{feynman-ibp-bench-2026,
+@dataset{feynman-bench-2026,
   author    = {Thibaut Barroyer and Shovon Biswas and Yann Fleureau and Jia Li and Julio Parra-Martinez and Mathis Reymond and Marina Vinyes},
   title     = {Feynman IBP benchmark},
   year      = {2026},
   publisher = {GitHub},
-  url       = {https://github.com/project-numina/feynman-ibp-bench},
+  url       = {https://github.com/project-numina/feynman-bench},
   note      = {All authors at Project Numina, except Julio Parra-Martinez at Institut des Hautes \'Etudes Scientifiques, 91440 Bures-sur-Yvette, France}
 }
 ```
